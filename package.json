@@ -6,7 +6,7 @@
   "scripts": {
     "precommit": "lint-staged",
     "prepush": "yarn test:unit",
-    "test": "yarn lint && yarn test:unit",
+    "test": "snyk test && yarn lint && yarn test:unit",
     "test:unit": "jest",
     "lint": "eslint ./",
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
@@ -48,7 +48,8 @@
     "husky": "^0.14.3",
     "jest": "^22.4.3",
     "lint-staged": "^7.1.0",
-    "prettier": "^1.12.1"
+    "prettier": "^1.12.1",
+    "snyk": "^1.80.1"
   },
   "lint-staged": {
     "*.js": [
