@@ -7,4 +7,11 @@ notifications:
   email: false
 before_install:
   - if [ "$TRAVIS_EVENT_TYPE" = "cron" ]; then cd ./scripts/cron-jobs/dependencies; fi
-  
+deploy:
+  provider: pages
+  skip-cleanup: true
+  keep-history: true
+  github-token: $GH_TOKEN
+  local-dir: src/www
+  on:
+    branch: master
