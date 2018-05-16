@@ -6,4 +6,4 @@ analyze and measure where you should spend your time optimizing your json files
 
 ## License
 
-This project is licensed under the MIT license, Copyright (c) 2017 Fetz. For more information see [LICENSE.md](./LICENSE.md)
+This project is licensed under the MIT license, Copyright (c) 2017 Fetz. For more information see [LICENSE](./LICENSE)
