@@ -9,7 +9,8 @@
     "test": "snyk test && yarn lint && yarn test:unit",
     "test:unit": "jest",
     "lint": "eslint ./",
-    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "monitor": "snyk monitor"
   },
   "repository": {
     "type": "git",
