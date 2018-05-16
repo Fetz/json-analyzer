@@ -1,6 +1,6 @@
 {
   "name": "json-analyzer",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "description": "analyze and measure where you should spend your time optimizing your json files",
   "main": "src/lib/json-analyzer.js",
   "scripts": {
@@ -12,11 +12,13 @@
     "lint": "eslint ./",
     "lint:pr": "danger ci",
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
-    "monitor": "snyk monitor"
+    "monitor": "snyk monitor",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Fetz/json-analyzer.git"
+    "url": "https://github.com/Fetz/json-analyzer.git"
   },
   "keywords": [
     "json",
@@ -56,7 +58,9 @@
     "jest": "^22.4.3",
     "lint-staged": "^7.1.0",
     "prettier": "^1.12.1",
-    "snyk": "^1.80.1"
+    "semantic-release": "^15.4.1",
+    "snyk": "^1.80.1",
+    "travis-deploy-once": "^5.0.0"
   },
   "lint-staged": {
     "*.js": [
