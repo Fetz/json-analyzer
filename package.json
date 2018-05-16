@@ -4,11 +4,12 @@
   "description": "analyze and measure where you should spend your time optimizing your json files",
   "main": "src/lib/json-analyzer.js",
   "scripts": {
-    "precommit": "lint-staged && yarn test",
-    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
-    "test": "jest",
+    "precommit": "lint-staged",
+    "prepush": "yarn test:unit",
+    "test": "yarn lint && yarn test:unit",
+    "test:unit": "jest",
     "lint": "eslint ./",
-    "ci": "yarn lint && yarn test"
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
   },
   "repository": {
     "type": "git",
