@@ -1,0 +1,67 @@
+{
+  "name": "json-analyzer",
+  "version": "0.0.0",
+  "description": "analyze and measure where you should spend your time optimizing your json files",
+  "main": "src/lib/json-analyzer.js",
+  "scripts": {
+    "precommit": "lint-staged && yarn test",
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fetz/json-analyzer.git"
+  },
+  "keywords": [
+    "json",
+    "tool",
+    "size",
+    "gzip",
+    "string",
+    "compressed",
+    "zlib",
+    "measure"
+  ],
+  "author": "Fetz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Fetz/json-analyzer/issues"
+  },
+  "homepage": "https://github.com/Fetz/json-analyzer#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jest": "^21.15.1",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "lint-staged": "^7.1.0",
+    "prettier": "^1.12.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn eslint --fix ./",
+      "git add"
+    ],
+    "*.json": [
+      "yarn prettier --parser json",
+      "git add"
+    ],
+    "*.md": [
+      "yarn prettier --parser markdown",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "jest": {
+    "verbose": true
+  }
+}
