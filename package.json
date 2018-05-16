@@ -6,7 +6,9 @@
   "scripts": {
     "precommit": "lint-staged && yarn test",
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint ./",
+    "ci": "yarn lint && yarn test"
   },
   "repository": {
     "type": "git",
@@ -49,7 +51,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "yarn eslint --fix ./",
+      "yarn lint --fix",
       "git add"
     ],
     "*.json": [
