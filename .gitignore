@@ -62,3 +62,6 @@ typings/
 
 # using yarn at the moment so ignore npm lock
 package-lock.json
+
+# man page is code generate so ignore it
+man
