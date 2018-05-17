@@ -3,6 +3,10 @@
   "version": "0.0.0-development",
   "description": "analyze and measure where you should spend your time optimizing your json files",
   "main": "src/lib/json-analyzer.js",
+  "directories": {
+    "bin": "src/bin",
+    "lib": "src/lib"
+  },
   "scripts": {
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "precommit": "lint-staged",
