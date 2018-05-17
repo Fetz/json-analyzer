@@ -5,7 +5,9 @@
   "main": "src/lib/json-analyzer.js",
   "directories": {
     "bin": "src/bin",
-    "lib": "src/lib"
+    "doc": "docs",
+    "lib": "src/lib",
+    "man": "man"
   },
   "scripts": {
     "commitmsg": "commitlint -e $GIT_PARAMS",
@@ -18,6 +20,7 @@
     "lint": "eslint ./",
     "lint:pr": "danger ci",
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "generate:man": "sh ./scripts/docs/man-page-generator.sh docs/cli/json-analyzer.md man/json-analyzer.1",
     "monitor": "snyk monitor",
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release"
@@ -64,6 +67,7 @@
     "husky": "^0.14.3",
     "jest": "^22.4.3",
     "lint-staged": "^7.1.0",
+    "marked-man": "^0.2.1",
     "prettier": "^1.12.1",
     "semantic-release": "^15.4.1",
     "snyk": "^1.80.1",
