@@ -1,0 +1,1003 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`verbose should handle an empty object 1`] = `
+Object {
+  "__meta__": Object {
+    "number_of_childs": 0,
+    "parent_relative_percentage": "100.00%",
+    "size": Object {
+      "gzip": "28 B",
+      "raw": "2 B",
+      "value": 2,
+    },
+  },
+}
+`;
+
+exports[`verbose should return a one level verbose analyze  1`] = `
+Object {
+  "__meta__": Object {
+    "biggest_node_child": "web-app",
+    "number_of_childs": 2,
+    "parent_relative_percentage": "100.00%",
+    "size": Object {
+      "gzip": "1.55 kB",
+      "raw": "2.73 kB",
+      "value": 2733,
+    },
+  },
+  "empty": Object {
+    "__meta__": Object {
+      "number_of_childs": 0,
+      "parent_relative_percentage": "0.073180%",
+      "size": Object {
+        "gzip": "28 B",
+        "raw": "2 B",
+        "value": 2,
+      },
+    },
+  },
+  "web-app": Object {
+    "__meta__": Object {
+      "biggest_node_child": "servlet",
+      "number_of_childs": 3,
+      "parent_relative_percentage": "99.158%",
+      "size": Object {
+        "gzip": "1.5 kB",
+        "raw": "2.71 kB",
+        "value": 2710,
+      },
+    },
+    "servlet": Object {
+      "__meta__": Object {
+        "number_of_childs": 5,
+        "size": Object {
+          "gzip": "1.38 kB",
+          "raw": "2.47 kB",
+          "value": 2474,
+        },
+      },
+    },
+    "servlet-mapping": Object {
+      "__meta__": Object {
+        "number_of_childs": 5,
+        "size": Object {
+          "gzip": "136 B",
+          "raw": "125 B",
+          "value": 125,
+        },
+      },
+    },
+    "taglib": Object {
+      "__meta__": Object {
+        "number_of_childs": 2,
+        "size": Object {
+          "gzip": "100 B",
+          "raw": "70 B",
+          "value": 70,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`verbose should return a verbose deep analyze 1`] = `
+Object {
+  "__meta__": Object {
+    "biggest_node_child": "web-app",
+    "number_of_childs": 2,
+    "parent_relative_percentage": "100.00%",
+    "size": Object {
+      "gzip": "1.55 kB",
+      "raw": "2.73 kB",
+      "value": 2733,
+    },
+  },
+  "empty": Object {
+    "__meta__": Object {
+      "number_of_childs": 0,
+      "parent_relative_percentage": "0.073180%",
+      "size": Object {
+        "gzip": "28 B",
+        "raw": "2 B",
+        "value": 2,
+      },
+    },
+  },
+  "web-app": Object {
+    "__meta__": Object {
+      "biggest_node_child": "servlet",
+      "number_of_childs": 3,
+      "parent_relative_percentage": "99.158%",
+      "size": Object {
+        "gzip": "1.5 kB",
+        "raw": "2.71 kB",
+        "value": 2710,
+      },
+    },
+    "servlet": Object {
+      "0": Object {
+        "__meta__": Object {
+          "biggest_node_child": "init-param",
+          "number_of_childs": 3,
+          "parent_relative_percentage": "59.568%",
+          "size": Object {
+            "gzip": "1.03 kB",
+            "raw": "1.63 kB",
+            "value": 1628,
+          },
+        },
+        "init-param": Object {
+          "__meta__": Object {
+            "biggest_node_child": "dataStoreUrl",
+            "number_of_childs": 42,
+            "parent_relative_percentage": "56.495%",
+            "size": Object {
+              "gzip": "964 B",
+              "raw": "1.54 kB",
+              "value": 1544,
+            },
+          },
+          "cachePackageTagsRefresh": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "25 B",
+                "raw": "2 B",
+                "value": 2,
+              },
+            },
+            "value": 60,
+          },
+          "cachePackageTagsStore": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "26 B",
+                "raw": "3 B",
+                "value": 3,
+              },
+            },
+            "value": 200,
+          },
+          "cachePackageTagsTrack": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "26 B",
+                "raw": "3 B",
+                "value": 3,
+              },
+            },
+            "value": 200,
+          },
+          "cachePagesDirtyRead": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "25 B",
+                "raw": "2 B",
+                "value": 2,
+              },
+            },
+            "value": 10,
+          },
+          "cachePagesRefresh": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "25 B",
+                "raw": "2 B",
+                "value": 2,
+              },
+            },
+            "value": 10,
+          },
+          "cachePagesStore": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "25 B",
+                "raw": "3 B",
+                "value": 3,
+              },
+            },
+            "value": 100,
+          },
+          "cachePagesTrack": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "26 B",
+                "raw": "3 B",
+                "value": 3,
+              },
+            },
+            "value": 200,
+          },
+          "cacheTemplatesRefresh": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "25 B",
+                "raw": "2 B",
+                "value": 2,
+              },
+            },
+            "value": 15,
+          },
+          "cacheTemplatesStore": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "26 B",
+                "raw": "2 B",
+                "value": 2,
+              },
+            },
+            "value": 50,
+          },
+          "cacheTemplatesTrack": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "25 B",
+                "raw": "3 B",
+                "value": 3,
+              },
+            },
+            "value": 100,
+          },
+          "configGlossary:adminEmail": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "44 B",
+                "raw": "13 B",
+                "value": 13,
+              },
+            },
+            "value": "ksm@pobox.com",
+          },
+          "configGlossary:installationAt": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "47 B",
+                "raw": "16 B",
+                "value": 16,
+              },
+            },
+            "value": "Philadelphia, PA",
+          },
+          "configGlossary:poweredBy": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "30 B",
+                "raw": "5 B",
+                "value": 5,
+              },
+            },
+            "value": "Cofax",
+          },
+          "configGlossary:poweredByIcon": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "49 B",
+                "raw": "17 B",
+                "value": 17,
+              },
+            },
+            "value": "/images/cofax.gif",
+          },
+          "configGlossary:staticPath": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "45 B",
+                "raw": "15 B",
+                "value": 15,
+              },
+            },
+            "value": "/content/static",
+          },
+          "dataStoreClass": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "51 B",
+                "raw": "22 B",
+                "value": 22,
+              },
+            },
+            "value": "org.cofax.SqlDataStore",
+          },
+          "dataStoreConnUsageLimit": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "25 B",
+                "raw": "3 B",
+                "value": 3,
+              },
+            },
+            "value": 100,
+          },
+          "dataStoreDriver": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "77 B",
+                "raw": "44 B",
+                "value": 44,
+              },
+            },
+            "value": "com.microsoft.jdbc.sqlserver.SQLServerDriver",
+          },
+          "dataStoreInitConns": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "25 B",
+                "raw": "2 B",
+                "value": 2,
+              },
+            },
+            "value": 10,
+          },
+          "dataStoreLogFile": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "73 B",
+                "raw": "36 B",
+                "value": 36,
+              },
+            },
+            "value": "/usr/local/tomcat/logs/datastore.log",
+          },
+          "dataStoreLogLevel": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "28 B",
+                "raw": "5 B",
+                "value": 5,
+              },
+            },
+            "value": "debug",
+          },
+          "dataStoreMaxConns": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "25 B",
+                "raw": "3 B",
+                "value": 3,
+              },
+            },
+            "value": 100,
+          },
+          "dataStoreName": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "30 B",
+                "raw": "5 B",
+                "value": 5,
+              },
+            },
+            "value": "cofax",
+          },
+          "dataStorePassword": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "43 B",
+                "raw": "18 B",
+                "value": 18,
+              },
+            },
+            "value": "dataStoreTestQuery",
+          },
+          "dataStoreTestQuery": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "65 B",
+                "raw": "34 B",
+                "value": 34,
+              },
+            },
+            "value": "SET NOCOUNT ON;select test='test';",
+          },
+          "dataStoreUrl": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "107 B",
+                "raw": "59 B",
+                "value": 59,
+              },
+            },
+            "value": "jdbc:microsoft:sqlserver://LOCALHOST:1433;DatabaseName=goon",
+          },
+          "dataStoreUser": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "23 B",
+                "raw": "2 B",
+                "value": 2,
+              },
+            },
+            "value": "sa",
+          },
+          "defaultFileTemplate": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "48 B",
+                "raw": "19 B",
+                "value": 19,
+              },
+            },
+            "value": "articleTemplate.htm",
+          },
+          "defaultListTemplate": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "45 B",
+                "raw": "16 B",
+                "value": 16,
+              },
+            },
+            "value": "listTemplate.htm",
+          },
+          "jspFileTemplate": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "48 B",
+                "raw": "19 B",
+                "value": 19,
+              },
+            },
+            "value": "articleTemplate.jsp",
+          },
+          "jspListTemplate": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "45 B",
+                "raw": "16 B",
+                "value": 16,
+              },
+            },
+            "value": "listTemplate.jsp",
+          },
+          "maxUrlLength": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "25 B",
+                "raw": "3 B",
+                "value": 3,
+              },
+            },
+            "value": 500,
+          },
+          "redirectionClass": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "57 B",
+                "raw": "24 B",
+                "value": 24,
+              },
+            },
+            "value": "org.cofax.SqlRedirection",
+          },
+          "searchEngineFileTemplate": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "51 B",
+                "raw": "20 B",
+                "value": 20,
+              },
+            },
+            "value": "forSearchEngines.htm",
+          },
+          "searchEngineListTemplate": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "57 B",
+                "raw": "24 B",
+                "value": 24,
+              },
+            },
+            "value": "forSearchEnginesList.htm",
+          },
+          "searchEngineRobotsDb": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "47 B",
+                "raw": "17 B",
+                "value": 17,
+              },
+            },
+            "value": "WEB-INF/robots.db",
+          },
+          "templateLoaderClass": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "62 B",
+                "raw": "29 B",
+                "value": 29,
+              },
+            },
+            "value": "org.cofax.FilesTemplateLoader",
+          },
+          "templateOverridePath": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "21 B",
+                "raw": "0 B",
+                "value": 0,
+              },
+            },
+            "value": "",
+          },
+          "templatePath": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "33 B",
+                "raw": "9 B",
+                "value": 9,
+              },
+            },
+            "value": "templates",
+          },
+          "templateProcessorClass": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "57 B",
+                "raw": "25 B",
+                "value": 25,
+              },
+            },
+            "value": "org.cofax.WysiwygTemplate",
+          },
+          "useDataStore": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "28 B",
+                "raw": "4 B",
+                "value": 4,
+              },
+            },
+            "value": true,
+          },
+          "useJSP": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "28 B",
+                "raw": "5 B",
+                "value": 5,
+              },
+            },
+            "value": false,
+          },
+        },
+        "servlet-class": Object {
+          "__meta__": Object {
+            "size": Object {
+              "gzip": "54 B",
+              "raw": "24 B",
+              "value": 24,
+            },
+          },
+          "value": "org.cofax.cds.CDSServlet",
+        },
+        "servlet-name": Object {
+          "__meta__": Object {
+            "size": Object {
+              "gzip": "33 B",
+              "raw": "8 B",
+              "value": 8,
+            },
+          },
+          "value": "cofaxCDS",
+        },
+      },
+      "1": Object {
+        "__meta__": Object {
+          "biggest_node_child": "init-param",
+          "number_of_childs": 3,
+          "parent_relative_percentage": "4.9396%",
+          "size": Object {
+            "gzip": "169 B",
+            "raw": "135 B",
+            "value": 135,
+          },
+        },
+        "init-param": Object {
+          "__meta__": Object {
+            "biggest_node_child": "mailHost",
+            "number_of_childs": 2,
+            "parent_relative_percentage": "1.7197%",
+            "size": Object {
+              "gzip": "69 B",
+              "raw": "47 B",
+              "value": 47,
+            },
+          },
+          "mailHost": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "32 B",
+                "raw": "5 B",
+                "value": 5,
+              },
+            },
+            "value": "mail1",
+          },
+          "mailHostOverride": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "30 B",
+                "raw": "5 B",
+                "value": 5,
+              },
+            },
+            "value": "mail2",
+          },
+        },
+        "servlet-class": Object {
+          "__meta__": Object {
+            "size": Object {
+              "gzip": "61 B",
+              "raw": "26 B",
+              "value": 26,
+            },
+          },
+          "value": "org.cofax.cds.EmailServlet",
+        },
+        "servlet-name": Object {
+          "__meta__": Object {
+            "size": Object {
+              "gzip": "38 B",
+              "raw": "10 B",
+              "value": 10,
+            },
+          },
+          "value": "cofaxEmail",
+        },
+      },
+      "2": Object {
+        "__meta__": Object {
+          "biggest_node_child": "servlet-class",
+          "number_of_childs": 2,
+          "parent_relative_percentage": "2.7076%",
+          "size": Object {
+            "gzip": "106 B",
+            "raw": "74 B",
+            "value": 74,
+          },
+        },
+        "servlet-class": Object {
+          "__meta__": Object {
+            "size": Object {
+              "gzip": "60 B",
+              "raw": "26 B",
+              "value": 26,
+            },
+          },
+          "value": "org.cofax.cds.AdminServlet",
+        },
+        "servlet-name": Object {
+          "__meta__": Object {
+            "size": Object {
+              "gzip": "37 B",
+              "raw": "10 B",
+              "value": 10,
+            },
+          },
+          "value": "cofaxAdmin",
+        },
+      },
+      "3": Object {
+        "__meta__": Object {
+          "biggest_node_child": "servlet-class",
+          "number_of_childs": 2,
+          "parent_relative_percentage": "2.7076%",
+          "size": Object {
+            "gzip": "100 B",
+            "raw": "74 B",
+            "value": 74,
+          },
+        },
+        "servlet-class": Object {
+          "__meta__": Object {
+            "size": Object {
+              "gzip": "58 B",
+              "raw": "25 B",
+              "value": 25,
+            },
+          },
+          "value": "org.cofax.cds.FileServlet",
+        },
+        "servlet-name": Object {
+          "__meta__": Object {
+            "size": Object {
+              "gzip": "36 B",
+              "raw": "11 B",
+              "value": 11,
+            },
+          },
+          "value": "fileServlet",
+        },
+      },
+      "4": Object {
+        "__meta__": Object {
+          "biggest_node_child": "init-param",
+          "number_of_childs": 3,
+          "parent_relative_percentage": "20.381%",
+          "size": Object {
+            "gzip": "440 B",
+            "raw": "557 B",
+            "value": 557,
+          },
+        },
+        "init-param": Object {
+          "__meta__": Object {
+            "biggest_node_child": "fileTransferFolder",
+            "number_of_childs": 14,
+            "parent_relative_percentage": "16.978%",
+            "size": Object {
+              "gzip": "375 B",
+              "raw": "464 B",
+              "value": 464,
+            },
+          },
+          "adminGroupID": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "24 B",
+                "raw": "1 B",
+                "value": 1,
+              },
+            },
+            "value": 4,
+          },
+          "betaServer": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "28 B",
+                "raw": "4 B",
+                "value": 4,
+              },
+            },
+            "value": true,
+          },
+          "dataLog": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "26 B",
+                "raw": "1 B",
+                "value": 1,
+              },
+            },
+            "value": 1,
+          },
+          "dataLogLocation": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "68 B",
+                "raw": "34 B",
+                "value": 34,
+              },
+            },
+            "value": "/usr/local/tomcat/logs/dataLog.log",
+          },
+          "dataLogMaxSize": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "21 B",
+                "raw": "0 B",
+                "value": 0,
+              },
+            },
+            "value": "",
+          },
+          "fileTransferFolder": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "100 B",
+                "raw": "52 B",
+                "value": 52,
+              },
+            },
+            "value": "/usr/local/tomcat/webapps/content/fileTransferFolder",
+          },
+          "log": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "26 B",
+                "raw": "1 B",
+                "value": 1,
+              },
+            },
+            "value": 1,
+          },
+          "logLocation": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "76 B",
+                "raw": "37 B",
+                "value": 37,
+              },
+            },
+            "value": "/usr/local/tomcat/logs/CofaxTools.log",
+          },
+          "logMaxSize": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "21 B",
+                "raw": "0 B",
+                "value": 0,
+              },
+            },
+            "value": "",
+          },
+          "lookInContext": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "26 B",
+                "raw": "1 B",
+                "value": 1,
+              },
+            },
+            "value": 1,
+          },
+          "removePageCache": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "75 B",
+                "raw": "37 B",
+                "value": 37,
+              },
+            },
+            "value": "/content/admin/remove?cache=pages&id=",
+          },
+          "removeTemplateCache": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "82 B",
+                "raw": "41 B",
+                "value": 41,
+              },
+            },
+            "value": "/content/admin/remove?cache=templates&id=",
+          },
+          "templatePath": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "44 B",
+                "raw": "15 B",
+                "value": 15,
+              },
+            },
+            "value": "toolstemplates/",
+          },
+          "test": Object {
+            "__meta__": Object {
+              "size": Object {
+                "gzip": "30 B",
+                "raw": "4 B",
+                "value": 4,
+              },
+            },
+            "value": null,
+          },
+        },
+        "servlet-class": Object {
+          "__meta__": Object {
+            "size": Object {
+              "gzip": "64 B",
+              "raw": "31 B",
+              "value": 31,
+            },
+          },
+          "value": "org.cofax.cms.CofaxToolsServlet",
+        },
+        "servlet-name": Object {
+          "__meta__": Object {
+            "size": Object {
+              "gzip": "39 B",
+              "raw": "10 B",
+              "value": 10,
+            },
+          },
+          "value": "cofaxTools",
+        },
+      },
+      "__meta__": Object {
+        "biggest_node_child": "0",
+        "number_of_childs": 5,
+        "parent_relative_percentage": "90.523%",
+        "size": Object {
+          "gzip": "1.38 kB",
+          "raw": "2.47 kB",
+          "value": 2474,
+        },
+      },
+    },
+    "servlet-mapping": Object {
+      "__meta__": Object {
+        "biggest_node_child": "cofaxEmail",
+        "number_of_childs": 5,
+        "parent_relative_percentage": "4.5737%",
+        "size": Object {
+          "gzip": "136 B",
+          "raw": "125 B",
+          "value": 125,
+        },
+      },
+      "cofaxAdmin": Object {
+        "__meta__": Object {
+          "size": Object {
+            "gzip": "37 B",
+            "raw": "8 B",
+            "value": 8,
+          },
+        },
+        "value": "/admin/*",
+      },
+      "cofaxCDS": Object {
+        "__meta__": Object {
+          "size": Object {
+            "gzip": "26 B",
+            "raw": "1 B",
+            "value": 1,
+          },
+        },
+        "value": "/",
+      },
+      "cofaxEmail": Object {
+        "__meta__": Object {
+          "size": Object {
+            "gzip": "45 B",
+            "raw": "19 B",
+            "value": 19,
+          },
+        },
+        "value": "/cofaxutil/aemail/*",
+      },
+      "cofaxTools": Object {
+        "__meta__": Object {
+          "size": Object {
+            "gzip": "36 B",
+            "raw": "8 B",
+            "value": 8,
+          },
+        },
+        "value": "/tools/*",
+      },
+      "fileServlet": Object {
+        "__meta__": Object {
+          "size": Object {
+            "gzip": "36 B",
+            "raw": "9 B",
+            "value": 9,
+          },
+        },
+        "value": "/static/*",
+      },
+    },
+    "taglib": Object {
+      "__meta__": Object {
+        "biggest_node_child": "taglib-location",
+        "number_of_childs": 2,
+        "parent_relative_percentage": "2.5613%",
+        "size": Object {
+          "gzip": "100 B",
+          "raw": "70 B",
+          "value": 70,
+        },
+      },
+      "taglib-location": Object {
+        "__meta__": Object {
+          "size": Object {
+            "gzip": "54 B",
+            "raw": "23 B",
+            "value": 23,
+          },
+        },
+        "value": "/WEB-INF/tlds/cofax.tld",
+      },
+      "taglib-uri": Object {
+        "__meta__": Object {
+          "size": Object {
+            "gzip": "38 B",
+            "raw": "9 B",
+            "value": 9,
+          },
+        },
+        "value": "cofax.tld",
+      },
+    },
+  },
+}
+`;
