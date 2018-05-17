@@ -32,7 +32,8 @@ const executeAction = (json, cmd) => {
   const result = analyze({
     json: parsed,
     target: cmd.target,
-    maxDepth: cmd.depth
+    maxDepth: cmd.depth,
+    verbose: cmd.verbose
   });
 
   console.log(prettyjson.render(result));
@@ -42,6 +43,7 @@ program
   .version(version)
   .description('json analyzer')
   .usage('[file] [options]')
+  .option('--verbose', 'verbose')
   .option('--depth <n>', 'depth', parseInt)
   .option('--target <value>', 'propA.propB[x]');
 
