@@ -13,10 +13,16 @@ before_script:
 after_success:
   - yarn report-coverage
 deploy:
-  provider: pages
-  skip-cleanup: true
-  keep-history: true
-  github-token: $GH_TOKEN
-  local-dir: src/www
-  on:
-    branch: master
+  - provider: pages
+    skip-cleanup: true
+    keep-history: true
+    github-token: $GH_TOKEN
+    local-dir: src/www
+    on:
+      branch: master
+  - provider: script
+    skip-cleanup: true
+    script:
+      - yarn semantic-release
+    on:
+      branch: master
