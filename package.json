@@ -84,5 +84,14 @@
   },
   "jest": {
     "verbose": true
+  },
+  "dependencies": {
+    "commander": "^2.15.1",
+    "lodash.flowright": "^3.5.0",
+    "lodash.get": "^4.4.2",
+    "pako": "^1.0.6",
+    "pretty-bytes": "^5.0.0",
+    "prettyjson": "^1.2.1",
+    "utf8-length": "^0.0.1"
   }
 }
