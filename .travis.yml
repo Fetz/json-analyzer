@@ -5,12 +5,8 @@ cache:
     - node_modules
 notifications:
   email: false
-before_install:
-  - if [ "$TRAVIS_EVENT_TYPE" = "cron" ]; then cd ./scripts/cron-jobs/dependencies; fi
-before_script:
-  - if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then commitlint-travis; fi
-  - if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then yarn generate:man; fi
-  - if [ "$TRAVIS_EVENT_TYPE" = "pull_request" ]; then yarn lint:pr; fi
+script:
+  - if [ "$TRAVIS_EVENT_TYPE" = "cron" ]; then yarn monitor; fi
 after_success:
   - yarn report-coverage
 deploy:
@@ -27,3 +23,4 @@ deploy:
       - yarn semantic-release
     on:
       branch: master
+      condition: $TRAVIS_EVENT_TYPE != "cron"
