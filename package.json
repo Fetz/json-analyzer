@@ -20,7 +20,7 @@
     "lint": "eslint ./",
     "lint:pr": "danger ci",
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
-    "generate:man": "sh ./scripts/docs/man-page-generator.sh docs/cli/json-analyzer.md man/json-analyzer.1",
+    "generate:man": "sh ./scripts/docs/man-page-generator.sh man/README.md man/json-analyzer.1",
     "monitor": "snyk monitor",
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release"
