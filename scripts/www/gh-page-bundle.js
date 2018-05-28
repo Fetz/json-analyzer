@@ -19,7 +19,7 @@ rollup
   })
   .then(function(bundle) {
     bundle.write({
-      file: 'src/www/.dist/json-analyzer.umd.js',
+      file: 'src/www/dist/json-analyzer.umd.js',
       name: 'json-analyzer',
       format: 'umd'
     });
