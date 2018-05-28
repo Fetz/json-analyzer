@@ -17,9 +17,36 @@
     body {
       padding: 0 10px;
     }
-    .title {
-      margin-top: 0;
-      padding-top: 0.67em;
+
+
+    /* TABS */
+
+    .anchor-tab {
+      display: inline-block;
+      margin: 0 0 -1px;
+      padding: 15px 25px;
+      font-weight: 600;
+      text-align: center;
+      color: #bbb;
+      border: 1px solid transparent;
+    }
+
+    .anchor-tab:hover {
+      color: #888;
+      cursor: pointer;
+    }
+
+    main > a:nth-last-of-type(1),
+    .anchor-tab:target {
+      color: #555;
+      border: 1px solid #ddd;
+      border-top: 2px solid orange;
+      border-bottom: 1px solid #fff;
+    }
+
+    .anchor-tab:target ~a:nth-last-of-type(1) {
+      color: #bbb;
+      border: 1px solid transparent;
     }
 
     .tab-section {
@@ -28,13 +55,24 @@
       border-top: 1px solid #ddd;
     }
 
-    #details:checked ~ #details-section,
-    #cli:checked ~ #cli-section,
-    #nodejs:checked ~ #nodejs-section,
-    #online:checked ~ #online-section {
+    main > section:nth-last-of-type(1),
+    #details:target ~ #details-section,
+    #cli-example:target ~ #cli-section,
+    #code-example:target ~ #nodejs-section,
+    #try-online:target ~ #online-section {
       display: block;
     }
-    
+
+    .anchor-tab:target ~section:nth-last-of-type(1) {
+      display: none;
+    }
+
+    /* END TABS */
+
+    .title {
+      margin-top: 0;
+      padding-top: 0.67em;
+    }
     
     #code-example-1,
     #code-example-2 {
@@ -42,11 +80,13 @@
       width: 100%;
       height: 8rem;
     }
+    
     #input {
       display: block;
       width: 100%;
       height: 20rem;
     }
+
     #output {
       display: block;
       width: 100%;
@@ -85,35 +125,6 @@
       outline: 0;
     }
 
-    .anchor-tab {
-      display: inline-block;
-      margin: 0 0 -1px;
-      padding: 15px 25px;
-      font-weight: 600;
-      text-align: center;
-      color: #bbb;
-      border: 1px solid transparent;
-    }
-
-    .anchor-tab:hover {
-      color: #888;
-      cursor: pointer;
-    }
-
-    .anchor-tab:target {
-      color: #555;
-      border: 1px solid #ddd;
-      border-top: 2px solid orange;
-      border-bottom: 1px solid #fff;
-    }
-
-    #details:target ~ #details-section,
-    #cli-example:target ~ #cli-section,
-    #code-example:target ~ #nodejs-section,
-    #try-online:target ~ #online-section {
-      display: block;
-    }
-
     .controls {
       border: none;
       margin: 10px 0 5px;
@@ -123,6 +134,7 @@
     .controls__options {
       margin-right: 10px;
     }
+
     .controls__input {
       margin-right: 5px; 
     }
@@ -255,7 +267,7 @@ console.log(
     </section>
   </main>
 
-  <script src=".dist/json-analyzer.umd.js"></script>
+  <script src="dist/json-analyzer.umd.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.3.3/ace.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.3.3/theme-monokai.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.3.3/mode-hjson.js"></script>

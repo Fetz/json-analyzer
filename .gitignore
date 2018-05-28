@@ -69,3 +69,4 @@ man/*
 
 # ignore demo page bundle generator
 src/www/.dist
+src/www/dist
