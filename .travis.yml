@@ -6,7 +6,11 @@ cache:
 notifications:
   email: false
 script:
+  - if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then commitlint-travis; fi
+  - if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then yarn generate:man; fi
+  - if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then yarn generate:ghpage; fi
   - if [ "$TRAVIS_EVENT_TYPE" = "cron" ]; then yarn monitor; fi
+  - if [ "$TRAVIS_EVENT_TYPE" = "pull_request" ]; then yarn lint:pr; fi
 after_success:
   - yarn report-coverage
 deploy:
@@ -24,3 +28,4 @@ deploy:
     on:
       branch: master
       condition: $TRAVIS_EVENT_TYPE != "cron"
+
