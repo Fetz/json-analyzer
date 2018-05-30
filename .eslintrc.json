@@ -1,5 +1,9 @@
 {
-  "extends": "standard",
+  "extends": [
+    "standard",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
   "plugins": [
     "jest",
     "prettier"
@@ -8,6 +12,7 @@
     "jest/globals": true
   },
   "rules": {
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["dangerfile.js", "scripts/**"], "optionalDependencies": false, "peerDependencies": false}],
     "prettier/prettier": "error",
     "arrow-spacing": "off",
     "block-spacing": "off",
