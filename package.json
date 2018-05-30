@@ -3,8 +3,8 @@
   "version": "0.0.0-development",
   "description": "analyze and measure where you should spend your time optimizing your json files",
   "main": "src/lib/json-analyzer.js",
+  "bin": { "json-analyzer.js": "src/bin/json-analyzer.js" },
   "directories": {
-    "bin": "src/bin",
     "doc": "docs",
     "lib": "src/lib",
     "man": "man"
