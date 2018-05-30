@@ -7,6 +7,7 @@ notifications:
   email: false
 script:
   - if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then commitlint-travis; fi
+  - if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then yarn test; fi
   - if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then yarn generate:man; fi
   - if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then yarn generate:ghpage; fi
   - if [ "$TRAVIS_EVENT_TYPE" = "cron" ]; then yarn monitor; fi

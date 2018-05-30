@@ -1,2 +1,3 @@
 coverage
 scripts/cron-jobs/dependencies/node_modules
+src/www/dist
