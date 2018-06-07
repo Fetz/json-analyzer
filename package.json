@@ -99,6 +99,9 @@
   "jest": {
     "verbose": true
   },
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"]
+  },
   "dependencies": {
     "commander": "^2.15.1",
     "lodash.flowright": "^3.5.0",
