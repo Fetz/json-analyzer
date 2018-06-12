@@ -29,8 +29,7 @@ const getArgsWithDefault = argv => [
 
 const executeAction = (json, cmd) => {
   const parsed = JSON.parse(json);
-  const result = analyze({
-    json: parsed,
+  const result = analyze(parsed, {
     target: cmd.target,
     maxDepth: cmd.depth,
     verbose: cmd.verbose

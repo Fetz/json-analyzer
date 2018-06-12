@@ -113,8 +113,7 @@ describe('json-analyzer', () => {
 
       require('./json-analyzer');
 
-      expect(analyze).toHaveBeenCalledWith({
-        json: fileContentsToParse,
+      expect(analyze).toHaveBeenCalledWith(fileContentsToParse, {
         target,
         maxDepth: depth
       });
@@ -261,6 +260,7 @@ describe('json-analyzer', () => {
         await Promise.resolve();
 
         expect(analyze).toHaveBeenCalledWith(
+          expect.any(Object),
           expect.objectContaining({
             target,
             maxDepth: depth

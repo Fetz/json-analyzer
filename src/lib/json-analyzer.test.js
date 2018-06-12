@@ -14,13 +14,13 @@ describe('jsonAnalyzer', () => {
 
   describe('verboseStrategy', () => {
     it('should delegate to verboseStrategy', () => {
-      jsonAnalyzer({ verbose: true });
+      jsonAnalyzer(null, { verbose: true });
       expect(verboseStrategy).toHaveBeenCalled();
     });
 
     it('should use default json if no target provided', () => {
       const expected = Symbol('json');
-      jsonAnalyzer({ verbose: true, json: expected });
+      jsonAnalyzer(expected, { verbose: true });
       expect(verboseStrategy).toHaveBeenCalledWith(
         expect.objectContaining({ json: expected })
       );
@@ -32,7 +32,7 @@ describe('jsonAnalyzer', () => {
 
       const target = Symbol('target');
       const json = Symbol('json');
-      jsonAnalyzer({ verbose: true, json, target });
+      jsonAnalyzer(json, { verbose: true, target });
 
       expect(get).toHaveBeenCalledWith(json, target);
       expect(verboseStrategy).toHaveBeenCalledWith(
@@ -43,7 +43,7 @@ describe('jsonAnalyzer', () => {
     it('should provide maxDepth to verboseStrategy', () => {
       const expected = Symbol('maxDepth');
 
-      jsonAnalyzer({ verbose: true, maxDepth: expected });
+      jsonAnalyzer(null, { verbose: true, maxDepth: expected });
       expect(verboseStrategy).toHaveBeenCalledWith(
         expect.objectContaining({ maxDepth: expected })
       );
@@ -57,13 +57,13 @@ describe('jsonAnalyzer', () => {
     });
 
     it('should delegate to simpleStrategy even if verbose is not provided', () => {
-      jsonAnalyzer({});
+      jsonAnalyzer(null);
       expect(simpleStrategy).toHaveBeenCalled();
     });
 
     it('should use default json if no target provided', () => {
       const expected = Symbol('json');
-      jsonAnalyzer({ json: expected });
+      jsonAnalyzer(expected);
       expect(simpleStrategy).toHaveBeenCalledWith({ json: expected });
     });
 
@@ -73,7 +73,7 @@ describe('jsonAnalyzer', () => {
 
       const target = Symbol('target');
       const json = Symbol('json');
-      jsonAnalyzer({ json, target });
+      jsonAnalyzer(json, { target });
 
       expect(get).toHaveBeenCalledWith(json, target);
       expect(simpleStrategy).toHaveBeenCalledWith({ json: expected });
@@ -82,7 +82,7 @@ describe('jsonAnalyzer', () => {
     it("shouldn't provide maxDepth to simpleStrategy", () => {
       const expected = Symbol('maxDepth');
 
-      jsonAnalyzer({ maxDepth: expected });
+      jsonAnalyzer(null, { maxDepth: expected });
       expect(simpleStrategy).not.toHaveBeenCalledWith(
         expect.objectContaining({ maxDepth: expected })
       );
