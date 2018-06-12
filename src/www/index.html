@@ -14,8 +14,53 @@
       margin: 0;
       font-family: Roboto,sans-serif;
     }
+
     body {
       padding: 0 10px;
+    }
+
+    tr:hover {
+      background: #eee;
+    }
+
+    td {
+      border-right: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    td:last-child {
+      border-right: none;
+    }
+
+    thead > tr:hover {
+      background: transparent;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-radius: 3px;
+      box-shadow: 0 1px 1px 0 rgba(60,64,67,.08), 0 1px 3px 1px rgba(60,64,67,.16);
+    }
+
+    thead {
+      border-bottom: 1px solid #ccc;
+    }
+
+    th {
+      border-right: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    th:last-child {
+      border-right: none;
+    }
+
+    tr {
+      border-bottom: 1px solid #ccc;
+    }
+
+    tr:last-child {
+      border-bottom: none;
     }
 
     .header {
@@ -273,6 +318,45 @@
           </label>
         </fieldset>
       </article>
+      <article>
+        <h2>Options:</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Option</th>
+              <th>Argument</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>--verbose</td>
+              <td>x</td>
+              <td>Show more details of the JSON (like the biggest size node)</td>
+            </tr>
+            <tr>
+              <td>--depth</td>
+              <td>&lt;+i&gt;</td>
+              <td>Recursive details of each JSON node (ignored if no verbose option)</td>
+            </tr>
+            <tr>
+              <td>--target</td>
+              <td>&lt;string&gt;*</td>
+              <td>Where to start to analyze (use <a href="https://lodash.com/docs/lastest#get">lodash.get</a> syntax)</td>
+            </tr>
+            <tr>
+              <td>--version</td>
+              <td>x</td>
+              <td>Display the version of json-analyzer</td>
+            </tr>
+            <tr>
+              <td>--help</td>
+              <td>x</td>
+              <td>Display json-analyzer help</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
     </section>
     <section id="nodejs-section" class="tab-section">
       <article>
@@ -300,6 +384,40 @@ const jsonObj = { "hello": "world" };
 console.log(
   jsonAnalyzer({ json: jsonObj /* verbose: true/false, maxDepth: positive_number, target: "nodeName[positive_number].nodeName" */})
 );</div>
+      </article>
+      <article>
+        <h2>Options:</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Option</th>
+              <th>Argument</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>json</td>
+              <td>&lt;object&gt;</td>
+              <td>JSON like object already parsed</td>
+            </tr>
+            <tr>
+              <td>verbose</td>
+              <td>[bool]</td>
+              <td>Show more details of the JSON (like the biggest size node)</td>
+            </tr>
+            <tr>
+              <td>--depth</td>
+              <td>[+i]</td>
+              <td>Recursive details of each JSON node (ignored if no verbose option)</td>
+            </tr>
+            <tr>
+              <td>--target</td>
+              <td>[string]*</td>
+              <td>Where to start to analyze (use <a href="https://lodash.com/docs/lastest#get">lodash.get</a> syntax)</td>
+            </tr>
+          </tbody>
+        </table>
       </article>
     </section>
     <section id="online-section" class="tab-section">

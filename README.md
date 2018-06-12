@@ -34,18 +34,19 @@ with npm:
 
 with pipe:
 
-`cat path/to/file.json | json-analyzer.js`
+`cat path/to/file.json | json-analyzer`
 
 without pipe:
 
-`json-analyzer.js path/to/file.json`
+`json-analyzer path/to/file.json`
 
-| Option          | Description |
-|-----------------|-------------|
-| `--verbose`     | Show more details of the JSON (like the biggest size node) |
-| `--depth`       | Recursive details of each JSON node (ignored if no verbose option) |
-| `--target`      | Where to start the analyze (use [lodash.get](https://lodash.com/docs/lastest#get) syntax) |
-| `--version`     | Display the version of json-analyzer |
+| Option          | [Argument](#arguments) | Description                                                                    |
+|-----------------|-------------|-------------------------------------------------------------------------------------------|
+| `--verbose`     |     x       | Show more details of the JSON (like the biggest size node)                                |
+| `--depth`       |    <+i>     | Recursive details of each JSON node (ignored if no verbose option)                        |
+| `--target`      |  <string>*  | Where to start to analyze (use [lodash.get](https://lodash.com/docs/lastest#get) syntax)  |
+| `--version`     |     x       | Display the version of json-analyzer                                                      |
+| `--help`        |     x       | Display json-analyzer help                                                                |
 
 [for more details](https://fetz.github.io/json-analyzer/#cli-example)
 
@@ -85,14 +86,26 @@ console.log(
 );
 ```
 
-| Option          | Description |
-|-----------------|-------------|
-| `json`          | JSON like object already parsed |
-| `verbose`       | Recursive details of each JSON node (ignored if no verbose option) |
-| `maxDepth`      | Recursive details of each JSON node (ignored if no verbose option) |
-| `target`        | Where to start the analyze (use [lodash.get](https://lodash.com/docs/lastest#get) syntax) |
+| Option          | [Argument](#arguments) | Description                                                                    |
+|-----------------|-------------|-------------------------------------------------------------------------------------------|
+| `json`          |  <object>   | JSON like object already parsed                                                           |
+| `verbose`       |   [bool]    | Show more details of the JSON (like the biggest size node)                                |
+| `maxDepth`      |    [+i]     | Recursive details of each JSON node (ignored if no verbose option)                        |
+| `target`        |  [string]*  | Where to start the analyze (use [lodash.get](https://lodash.com/docs/lastest#get) syntax) |
 
 [for more details](https://fetz.github.io/json-analyzer/#code-example)
+
+##### Arguments
+
+| Arguments Symbols    | Description                                                                    |
+|----------------------|--------------------------------------------------------------------------------|
+|       x              | no arguments                                                                   |
+|      < >             | mandatory                                                                      |
+|      [ ]             | optional                                                                       |
+|       +              | positive                                                                       |
+|       i              | integer                                                                        |
+|     string           | text                                                                           |
+|       *              | special argument, read the description for more details of that arguments      |
 
 ## License
 
