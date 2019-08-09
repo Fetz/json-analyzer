@@ -103,7 +103,7 @@
     "extends": ["@commitlint/config-conventional"]
   },
   "dependencies": {
-    "commander": "^2.15.1",
+    "commander": "^3.0.0",
     "lodash.flowright": "^3.5.0",
     "lodash.get": "^4.4.2",
     "lodash.isobject": "^3.0.2",
