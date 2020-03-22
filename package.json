@@ -55,7 +55,7 @@
     "@commitlint/travis-cli": "^7.0.0",
     "babel-preset-es2015-rollup": "^3.0.0",
     "codecov": "^3.0.2",
-    "danger": "^3.6.6",
+    "danger": "^10.0.0",
     "eslint": "^5.0.0",
     "eslint-config-defaults": "^9.0.0",
     "eslint-config-prettier": "^2.9.0",
