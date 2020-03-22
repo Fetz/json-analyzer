@@ -70,7 +70,7 @@
     "jest": "^23.0.0",
     "lint-staged": "^7.1.0",
     "marked-man": "^0.2.1",
-    "prettier": "^1.12.1",
+    "prettier": "^2.0.0",
     "rollup": "^0.60.0",
     "rollup-plugin-babel": "^3.0.4",
     "rollup-plugin-commonjs": "^9.1.3",
