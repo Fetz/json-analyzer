@@ -4967,9 +4967,9 @@ package-json@^4.0.0:
     registry-url "^3.0.3"
     semver "^5.1.0"
 
-pako@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.6.tgz#0101211baa70c4bca4a0f63f2206e97b7dfaf258"
+pako@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/pako/-/pako-2.0.1.tgz#31e05b87f8ceae06ef286421575ea962ac9c0d8a"
 
 parse-diff@^0.4.2:
   version "0.4.2"
