@@ -107,7 +107,7 @@
     "lodash.flowright": "^3.5.0",
     "lodash.get": "^4.4.2",
     "lodash.isobject": "^3.0.2",
-    "pako": "^1.0.6",
+    "pako": "^2.0.0",
     "pretty-bytes": "^5.0.0",
     "prettyjson": "^1.2.1",
     "utf8-length": "^0.0.1"
